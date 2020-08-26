@@ -1,0 +1,15 @@
+current directory: /Users/yasuko/workspace/dev-exam/vendr/bundle/ruby/2.6.0/gems/bindex-0.7.0/ext/skiptrace
+/Users/yasuko/.rbenv/versions/2.6.3/bin/ruby -I /Users/yasuko/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20200826-38783-lax668.rb extconf.rb
+creating Makefile
+
+current directory: /Users/yasuko/workspace/dev-exam/vendr/bundle/ruby/2.6.0/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/yasuko/workspace/dev-exam/vendr/bundle/ruby/2.6.0/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/cruby.bundle
+
+current directory: /Users/yasuko/workspace/dev-exam/vendr/bundle/ruby/2.6.0/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20200826-38783-19lnh7n/skiptrace
