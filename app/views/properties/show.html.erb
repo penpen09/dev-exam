@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @property.name %>
+</p>
+
+<p>
+  <strong>Rent:</strong>
+  <%= @property.rent %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @property.address %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @property.age %>
+</p>
+
+<p>
+  <strong>Remark:</strong>
+  <%= @property.remark %>
+</p>
+
+<% @nearest_stations.each.with_index(1) do |nearest_station, i| %>
+  <h2>最寄駅<%= "#{i}" %></h2>
+  <p>
+    <strong>Route_Name:</strong>
+    <%= @nearest_station.route_name %>
+  </p>
+  <p>
+    <strong>Station:</strong>
+    <%= @nearest_station.station %>
+  </p>
+  <p>
+    <strong>Minutes_Foot:</strong>
+    <%= @nearest_station.minutes_foot %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>
