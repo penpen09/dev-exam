@@ -28,7 +28,7 @@ class PropertiesController < ApplicationController
   # POST /properties.json
   def create
     @property = Property.new(property_params)
-    binding.pry
+    # binding.pry
     respond_to do |format|
       if @property.save
         format.html { redirect_to @property, notice: 'Property was successfully created.' }
@@ -69,6 +69,6 @@ class PropertiesController < ApplicationController
     @property = Property.find(params[:id])
   end
   def property_params
-    params.require(:property).permit(:name, :rent, :address, :age, :remark, nearest_stations_attributes: [:id, :route_name, :station, :munutes_foot])
+    params.require(:property).permit(:name, :price, :address, :age, :remark, nearest_stations_attributes: [:route_name, :station, :minutes_foot])
   end
 end
