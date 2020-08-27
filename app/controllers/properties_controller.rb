@@ -69,6 +69,6 @@ class PropertiesController < ApplicationController
     @property = Property.find(params[:id])
   end
   def property_params
-    params.require(:property).permit(:name, :price, :address, :age, :remark, nearest_stations_attributes: [:route_name, :station, :minutes_foot])
+    params.require(:property).permit(:name, :rent, :address, :age, :remark, nearest_stations_attributes: [:id, :route_name, :station, :minutes_foot])
   end
 end
