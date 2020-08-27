@@ -36,29 +36,23 @@
     <%= form.text_area :remark %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-
-<div class="form_station">
-  <% i=0 %>
   <%= form.fields_for :nearest_stations do | nearest_station | %>
-    <h2 class="moyorieki">最寄駅<%= i += 1 %></h2>
+    <h2>最寄駅<%= nearest_station.index + 1 %></h2>
     <div class="field">
       <%= nearest_station.label :route_name ,"路線名" %>
-      <%= form.text_field :route_name %>
+      <%= nearest_station.text_field :route_name %>
     </div>
     <div class="field">
       <%= nearest_station.label :station ,"駅名"%>
-      <%= form.text_field :station %>
+      <%= nearest_station.text_field :station %>
     </div>
     <div class="field">
       <%= nearest_station.label :minutes_foot ,"徒歩数"%>
-      <%= form.text_field :minutes_foot %>
+      <%= nearest_station.text_field :minutes_foot %>
     </div>
     <div class="delete_station"></div>
   <% end %>
-</div>
+
   <div class="actions">
     <%= form.submit%>
   </div>
